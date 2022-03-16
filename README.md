@@ -1,2 +1,2 @@
-# k8s-manifests
-K8s manifests for AWS Cluster
+# infra
+AWS Cloud Infrastructure IaC Scripts
