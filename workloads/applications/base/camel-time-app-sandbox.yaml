@@ -6,7 +6,7 @@ metadata:
   labels:
     app: camel-time-app-sandbox
   name: camel-time-app-sandbox
-  namespace: default
+  namespace: camel-time
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
