@@ -3,4 +3,8 @@ kind: Kustomization
 resources:
   - ../base/camel-time-app-sandbox.yaml
   - ../base/camel-time-sandbox-lb-acm.yaml
+  - ../base/camel-wfp-app-sandbox-integration.yaml
+  - ../base/camel-wfp-app-sandbox-ui.yaml
+  - ../base/paasport-admin-dashboard-app-sandbox-integration.yaml
+  - ../base/paasport-admin-dashboard-app-sandbox-ui.yaml    
 patches:

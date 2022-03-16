@@ -3,3 +3,13 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: camel-time 
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: camel-wfp 
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: paasport-admin-dashboard 
