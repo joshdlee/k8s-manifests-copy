@@ -29,7 +29,7 @@ spec:
       - env:
         - name: SPRING_PROFILES_ACTIVE
           value: sandbox
-        image: 362561182570.dkr.ecr.us-east-1.amazonaws.com/camel-time:20220309_29
+          image: 744692937981.dkr.ecr.us-east-1.amazonaws.com/camel-time-app:latest 
         imagePullPolicy: Always
         name: camel-time-sandbox
         ports:
