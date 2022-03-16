@@ -12,4 +12,4 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: passport-admin-dashboard 
+  name: paasport-admin-dashboard 
