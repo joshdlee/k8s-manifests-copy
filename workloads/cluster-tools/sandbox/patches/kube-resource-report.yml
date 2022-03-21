@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: kube-resource-report
+  namespace: cluster-tools
+spec:
+  rules:
+    - host: "kube-resource-report.dev.in.bitbrew.com"
+      http:
+        paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: kube-resource-report
+              port:
+                number: 80
+

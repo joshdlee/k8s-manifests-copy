@@ -1,0 +1,12 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: aws-load-balancer-controller
+  namespace: cluster-tools
+spec:
+  values:
+    clusterName: bitbrew-eks-infra-dev-cluster
+    serviceAccount:
+      annotations:
+        eks.amazonaws.com/role-arn: "arn:aws:iam::864734260214:role/irsa-aws-load-balancer-controller-dev"
+
