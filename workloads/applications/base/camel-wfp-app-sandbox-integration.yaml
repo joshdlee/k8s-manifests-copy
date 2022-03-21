@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - image: 744692937981.dkr.ecr.us-east-1.amazonaws.com/camel-wfp-integration:latest
-          name: camel-wfp-sandbox-integration
+          name: camel-wfp-sandbox-integration 
           env:
             - name: "SPRING_PROFILES_ACTIVE"
               value: "sandbox"
