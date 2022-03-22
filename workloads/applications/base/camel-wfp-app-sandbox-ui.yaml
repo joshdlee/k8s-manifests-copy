@@ -21,6 +21,8 @@ spec:
           env:
             - name: "SPRING_PROFILES_ACTIVE"
               value: "sandbox"
+            - name: "AWS_REGION"
+              value: "us-east-1"
           ports:
             - containerPort: 8080
               name: http
