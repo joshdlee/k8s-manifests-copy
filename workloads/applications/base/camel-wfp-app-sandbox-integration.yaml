@@ -6,6 +6,7 @@ metadata:
   labels:
     app: camel-wfp-app-sandbox-integration
 spec:
+  serviceAccountName: camel-wfp
   replicas: 1
   selector:
     matchLabels:
