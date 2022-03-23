@@ -1,0 +1,21 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - ../base/metrics-server
+  - ../base/kube-resource-report
+  - ../base/aws-load-balancer-controller
+  - ../base/external-dns
+patches:
+  - path: patches/aws-load-balancer-controller.yml
+    target:
+      name: aws-load-balancer-controller
+      kind: HelmRelease
+  - path: patches/external-dns.yml
+    target:
+      name: external-dns
+      kind: HelmRelease
+  - path: patches/kube-resource-report.yml
+    target:
+      name: kube-resource-report
+      kind: Ingress
+

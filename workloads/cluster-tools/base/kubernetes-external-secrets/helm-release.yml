@@ -1,0 +1,30 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: kubernetes-external-secrets
+  namespace: cluster-tools
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: kubernetes-external-secrets
+      version: '8.3.0'
+      sourceRef:
+        kind: HelmRepository
+        name: kubernetes-external-secrets
+        namespace: cluster-tools
+      interval: 1m
+  values:
+    podLabels:
+      eks.amazonaws.com/fargate-profile: cluster-tools-profile
+    env:
+      AWS_REGION: us-east-1
+    securityContext:
+      fsGroup: 65534
+    resources:
+      limits:
+        cpu: 100m
+        memory: 600Mi
+      requests:
+        cpu: 100m
+        memory: 600Mi
