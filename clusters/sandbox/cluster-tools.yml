@@ -8,6 +8,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  path: ./workloads/applications/cluster-tools
+  path: ./workloads/cluster-tools/sandbox
   prune: true
   validation: client

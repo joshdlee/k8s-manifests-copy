@@ -1,17 +1,11 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../base/priority-classes
   - ../base/metrics-server
-  - ../base/kubernetes-external-secrets
   - ../base/kube-resource-report
   - ../base/aws-load-balancer-controller
   - ../base/external-dns
 patches:
-  - path: patches/kubernetes-external-secrets.yml
-    target:
-      name: kubernetes-external-secrets
-      kind: HelmRelease
   - path: patches/aws-load-balancer-controller.yml
     target:
       name: aws-load-balancer-controller

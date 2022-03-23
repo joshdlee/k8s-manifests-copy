@@ -7,5 +7,5 @@ spec:
   values:
     serviceAccount:
       annotations:
-        eks.amazonaws.com/role-arn: "arn:aws:iam::864734260214:role/irsa-external-dns-dev"
+        eks.amazonaws.com/role-arn: "arn:aws:iam::744692937981:role/irsa-external-dns-sandbox"
 

@@ -8,5 +8,5 @@ spec:
     clusterName: bitbrew-eks-infra-dev-cluster
     serviceAccount:
       annotations:
-        eks.amazonaws.com/role-arn: "arn:aws:iam::864734260214:role/irsa-aws-load-balancer-controller-dev"
+        eks.amazonaws.com/role-arn: "arn:aws:iam::744692937981:role/irsa-aws-load-balancer-controller-sandbox"
 
