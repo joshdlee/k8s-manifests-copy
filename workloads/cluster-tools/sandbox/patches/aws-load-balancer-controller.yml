@@ -9,5 +9,5 @@ spec:
     region: us-east-1
     serviceAccount:
       annotations:
-        eks.amazonaws.com/role-arn: "arn:aws:iam::744692937981:role/irsa-aws-load-balancer-controller-sandbox"
+        eks.amazonaws.com/role-arn: "arn:aws:iam::744692937981:role/aws-load-balancer-controller-sandbox"
 
