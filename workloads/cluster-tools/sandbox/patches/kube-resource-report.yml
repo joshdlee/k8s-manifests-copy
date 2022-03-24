@@ -5,7 +5,7 @@ metadata:
   namespace: cluster-tools
 spec:
   rules:
-    - host: "kube-resource-report.dev.in.bitbrew.com"
+    - host: "kube-resource-report.sandbox.paasport.io"
       http:
         paths:
         - path: /
