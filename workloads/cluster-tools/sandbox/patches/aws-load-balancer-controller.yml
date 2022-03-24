@@ -5,6 +5,7 @@ metadata:
   namespace: cluster-tools
 spec:
   values:
+    vpcId: vpc-01ffeed70c5165ba5
     clusterName: bitbrew-eks-infra-dev-cluster
     region: us-east-1
     serviceAccount:

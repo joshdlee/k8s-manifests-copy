@@ -5,7 +5,6 @@ metadata:
   namespace: cluster-tools
 spec:
   values:
-    vpcId: vpc-01ffeed70c5165ba5
     serviceAccount:
       annotations:
         eks.amazonaws.com/role-arn: "arn:aws:iam::744692937981:role/external-dns-sandbox"
