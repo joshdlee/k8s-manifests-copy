@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: paasport-admin-dashboard-app-sandbox-ui
+  namespace: paasport-admin-dashboard
+  labels:
+    app: paasport-admin-dashboard-app-sandbox-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: paasport-admin-dashboard-app-sandbox-ui
+  template:
+    metadata:
+      labels:
+        app: paasport-admin-dashboard-app-sandbox-ui
+    spec:
+      serviceAccountName: paasport-admin-dashboard-ui
+      containers:
+        - image: 744692937981.dkr.ecr.us-east-1.amazonaws.com/paasport-admin-dashboard-ui:latest
+          name: paasport-admin-dashboard-sandbox-ui
+          env:
+            - name: "SPRING_PROFILES_ACTIVE"
+              value: "sandbox"
+          ports:
+            - containerPort: 8080
+              name: http
+          imagePullPolicy: Always
+      imagePullSecrets:
+        - name: us-east-1-ecr-registry
+
+

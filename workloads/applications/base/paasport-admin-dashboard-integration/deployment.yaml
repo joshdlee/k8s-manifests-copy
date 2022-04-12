@@ -15,9 +15,10 @@ spec:
       labels:
         app: paasport-admin-dashboard-app-sandbox-integration
     spec:
+      serviceAccountName: paasport-admin-dashboard-integration
       containers:
         - image: 744692937981.dkr.ecr.us-east-1.amazonaws.com/paasport-admin-dashboard-integration:latest
-          name: paasport-admin-dashboard-sandbox-integration 
+          name: paasport-admin-dashboard-sandbox-integration
           env:
             - name: "SPRING_PROFILES_ACTIVE"
               value: "sandbox"

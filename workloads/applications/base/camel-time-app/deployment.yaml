@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: camel-wfp-app-sandbox-integration
-  namespace: camel-wfp
+  name: camel-time-app-sandbox
+  namespace: camel-time
   labels:
-    app: camel-wfp-app-sandbox-integration
+    app: camel-time-app-sandbox
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: camel-wfp-app-sandbox-integration
+      app: camel-time-app-sandbox
   template:
     metadata:
       labels:
-        app: camel-wfp-app-sandbox-integration
+        app: camel-time-app-sandbox
     spec:
-      serviceAccountName: camel-wfp
+      serviceAccountName: camel-time
       containers:
-        - image: 744692937981.dkr.ecr.us-east-1.amazonaws.com/camel-wfp-integration:latest
-          name: camel-wfp-sandbox-integration
+        - image: 744692937981.dkr.ecr.us-east-1.amazonaws.com/camel-time:latest
+          name: camel-time-sandbox
           env:
             - name: "SPRING_PROFILES_ACTIVE"
               value: "sandbox"
