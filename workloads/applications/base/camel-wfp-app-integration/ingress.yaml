@@ -25,4 +25,4 @@ spec:
             service:
               name: camel-wfp-integration
               port:
-                number: 80
+                number: 8080
