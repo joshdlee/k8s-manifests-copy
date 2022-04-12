@@ -4,6 +4,6 @@ resources:
   - ../base/camel-time-app/
   - ../base/camel-wfp-app-ui/
   - ../base/camel-wfp-app-integration/
-  - ../base/paasport-admin-dashboard-integration.yaml
-  - ../base/paasport-admin-dashboard-ui.yaml
+  - ../base/paasport-admin-dashboard-integration/
+  - ../base/paasport-admin-dashboard-ui/
 patches:
