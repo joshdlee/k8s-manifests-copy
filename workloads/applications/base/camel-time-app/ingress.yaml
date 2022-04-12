@@ -4,11 +4,20 @@ metadata:
   namespace: camel-time
   name: camel-time
   annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/load-balancer-name: launchpad
     alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/group.name: launchpad
     alb.ingress.kubernetes.io/target-type: ip
+    alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
+    alb.ingress.kubernetes.io/ssl-redirect: '443'
+    alb.ingress.kubernetes.io/success-codes: '302'
+    alb.ingress.kubernetes.io/inbound-cidrs: '47.32.231.239/32,59.94.34.114/32,52.4.244.61/32'
+    alb.ingress.kubernetes.io/waf-acl-id: '76b478fd-eab7-4985-9c5c-bafe562137c9'
 spec:
   rules:
-    - http:
+    - host: time.sandbox.paasport.io
+      http:
         paths:
         - path: /
           pathType: Prefix
