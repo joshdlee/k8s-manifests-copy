@@ -1,32 +1,8 @@
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  name: camel-wfp
-  namespace: camel-wfp
-  annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::744692937981:role/launchpad_app_access-sandbox
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  namespace: camel-wfp
-  name: camel-wfp-service
-spec:
-  ports:
-    - port: 8080
-      targetPort: 8080
-      protocol: TCP
-  type: ClusterIP
-  selector:
-    app: camel-wfp-app-sandbox-ui
-
----
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  namespace: camel-wfp
-  name: camel-wfp-ingress
+  namespace: paasport-admin-dashboard
+  name: paasport-admin-dashboard-ui
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/load-balancer-name: launchpad
@@ -39,14 +15,14 @@ metadata:
     alb.ingress.kubernetes.io/inbound-cidrs: '47.32.231.239/32,59.94.34.114/32,52.4.244.61/32'
     alb.ingress.kubernetes.io/waf-acl-id: '76b478fd-eab7-4985-9c5c-bafe562137c9'
 spec:
+  ingressClassName: alb
   rules:
-    - host: "wfp.sandbox.paasport.io"
-      http:
+    - http:
         paths:
         - path: /
           pathType: Prefix
           backend:
             service:
-              name: camel-wfp-service
+              name: paasport-admin-dashboard-ui
               port:
-                number: 8080
+                number: 80

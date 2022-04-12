@@ -15,10 +15,10 @@ spec:
       labels:
         app: camel-wfp-app-sandbox-ui
     spec:
-      serviceAccountName: camel-wfp
+      serviceAccountName: camel-wfp-ui
       containers:
         - image: 744692937981.dkr.ecr.us-east-1.amazonaws.com/camel-wfp-ui:latest
-          name: camel-wfp-sandbox-ui 
+          name: camel-wfp-sandbox-ui
           env:
             - name: "SPRING_PROFILES_ACTIVE"
               value: "sandbox"

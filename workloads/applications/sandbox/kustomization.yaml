@@ -1,11 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-  - ../base/camel-wfp-service-account.yaml
-  - ../base/camel-time-app-sandbox.yaml
-  - ../base/camel-time-sandbox-lb-acm.yaml
-  - ../base/camel-wfp-app-sandbox-integration.yaml
-  - ../base/camel-wfp-app-sandbox-ui.yaml
-  - ../base/paasport-admin-dashboard-app-sandbox-integration.yaml
-  - ../base/paasport-admin-dashboard-app-sandbox-ui.yaml    
+  - ../base/camel-time-app/
+  - ../base/camel-wfp-app-ui/
+  - ../base/camel-wfp-app-integration/
+  - ../base/paasport-admin-dashboard-integration.yaml
+  - ../base/paasport-admin-dashboard-ui.yaml
 patches:

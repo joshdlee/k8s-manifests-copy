@@ -1,23 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: paasport-admin-dashboard-app-sandbox-ui
-  namespace: paasport-admin-dashboard
+  name: camel-wfp-app-sandbox-integration
+  namespace: camel-wfp
   labels:
-    app: paasport-admin-dashboard-app-sandbox-ui
+    app: camel-wfp-app-sandbox-integration
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: paasport-admin-dashboard-app-sandbox-ui
+      app: camel-wfp-app-sandbox-integration
   template:
     metadata:
       labels:
-        app: paasport-admin-dashboard-app-sandbox-ui
+        app: camel-wfp-app-sandbox-integration
     spec:
+      serviceAccountName: camel-wfp-integration
       containers:
-        - image: 744692937981.dkr.ecr.us-east-1.amazonaws.com/paasport-admin-dashboard-ui:latest
-          name: paasport-admin-dashboard-sandbox-ui 
+        - image: 744692937981.dkr.ecr.us-east-1.amazonaws.com/camel-wfp-integration:latest
+          name: camel-wfp-sandbox-integration
           env:
             - name: "SPRING_PROFILES_ACTIVE"
               value: "sandbox"
