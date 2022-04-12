@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   namespace: camel-wfp
-  name: camel-wfp-app-integration
+  name: camel-wfp-integration
 spec:
   ports:
     - port: 80

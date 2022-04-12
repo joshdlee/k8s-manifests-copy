@@ -14,7 +14,7 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: camel-time-service
+              name: camel-time
               port:
                 number: 80
 

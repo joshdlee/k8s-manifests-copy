@@ -24,6 +24,6 @@ spec:
           pathType: Prefix
           backend:
             service:
-              name: camel-wfp-service
+              name: camel-wfp-ui
               port:
                 number: 8080
