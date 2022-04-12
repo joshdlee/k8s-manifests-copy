@@ -16,7 +16,8 @@ metadata:
     alb.ingress.kubernetes.io/waf-acl-id: '76b478fd-eab7-4985-9c5c-bafe562137c9'
 spec:
   rules:
-    - http:
+    - host: mission-control-service.sandbox.paasport.io
+      http:
         paths:
         - path: /
           pathType: Prefix
