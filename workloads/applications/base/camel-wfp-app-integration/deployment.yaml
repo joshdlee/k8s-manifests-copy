@@ -26,13 +26,13 @@ spec:
             - containerPort: 8080
               name: http
           imagePullPolicy: Always
-      resources:
-        limits:
-          memory: "2Gi"
-          cpu: "500m"
-        requests:
-          memory: "2Gi"
-          cpu: "500m"
+          resources:
+            limits:
+              memory: "2Gi"
+              cpu: "500m"
+            requests:
+              memory: "2Gi"
+              cpu: "500m"
       imagePullSecrets:
         - name: us-east-1-ecr-registry
 
