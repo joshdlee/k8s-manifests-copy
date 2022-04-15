@@ -32,7 +32,7 @@ spec:
               cpu: ".75"
             requests:
               memory: "2Gi"
-              cpu: ".75"
+              cpu: ".5"
       imagePullSecrets:
         - name: us-east-1-ecr-registry
 
