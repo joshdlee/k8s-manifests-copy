@@ -29,10 +29,10 @@ spec:
           resources:
             limits:
               memory: "2Gi"
-              cpu: "500m"
+              cpu: ".5"
             requests:
               memory: "2Gi"
-              cpu: "500m"
+              cpu: ".5"
       imagePullSecrets:
         - name: us-east-1-ecr-registry
 
