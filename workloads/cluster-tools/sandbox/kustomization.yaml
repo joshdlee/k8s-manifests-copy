@@ -5,6 +5,7 @@ resources:
   - ../base/kube-resource-report
   - ../base/aws-load-balancer-controller
   - ../base/external-dns
+  - ../base/aws-logging
 patches:
   - path: patches/aws-load-balancer-controller.yml
     target:
@@ -18,4 +19,8 @@ patches:
     target:
       name: kube-resource-report
       kind: Ingress
+  - path: patches/aws-logging.yml
+    target:
+      name: aws-logging
+      kind: ConfigMap
 
