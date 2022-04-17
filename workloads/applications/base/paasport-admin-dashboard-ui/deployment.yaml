@@ -26,6 +26,10 @@ spec:
             - containerPort: 8080
               name: http
           imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "1.5Gi"
+              cpu: ".5"
       imagePullSecrets:
         - name: us-east-1-ecr-registry
 
