@@ -14,6 +14,7 @@ metadata:
     alb.ingress.kubernetes.io/success-codes: '302'
     alb.ingress.kubernetes.io/inbound-cidrs: '47.32.231.239/32,59.94.34.114/32,52.4.244.61/32,209.161.250.102/32,135.0.166.59/32,54.224.203.162/32,184.66.229.61/32'
     alb.ingress.kubernetes.io/waf-acl-id: '76b478fd-eab7-4985-9c5c-bafe562137c9'
+    alb.ingress.kubernetes.io/healthcheck-path: '/api/v1'
 spec:
   rules:
     - host: mission-control-service.sandbox.paasport.io
