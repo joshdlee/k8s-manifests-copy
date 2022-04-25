@@ -10,4 +10,4 @@ spec:
       protocol: TCP
   type: ClusterIP
   selector:
-    app: camel-time-app-sandbox-ui
+    app: camel-time-app-sandbox
