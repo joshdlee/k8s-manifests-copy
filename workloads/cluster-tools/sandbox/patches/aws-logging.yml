@@ -10,12 +10,11 @@ data:
         Name cloudwatch_logs
         Match   *
         region us-east-1
-        log_group_name sandbox-cluster
-        log_stream_prefix from-fluent-bit-
+        log_group_name eks/sandbox-cluster
+        log_stream_prefix pod-logs-
         log_retention_days 7
         auto_create_group true
         log_key log
-
   parsers.conf: |
     [PARSER]
         Name crio
