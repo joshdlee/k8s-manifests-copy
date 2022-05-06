@@ -25,3 +25,8 @@ metadata:
   name: aws-observability
   labels:
     aws-observability: enabled
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: fargate-container-insights
