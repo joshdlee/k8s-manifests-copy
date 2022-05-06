@@ -455,7 +455,7 @@ data:
         log_group_name: '/aws/containerinsights/{ClusterName}/performance'
         log_stream_name: '{PodName}'
         namespace: 'ContainerInsights'
-        region: us-esat-1
+        region: us-east-1
         resource_to_telemetry_conversion:
           enabled: true
         eks_fargate_container_insights_enabled: true
