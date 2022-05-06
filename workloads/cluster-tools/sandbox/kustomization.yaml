@@ -6,7 +6,6 @@ resources:
   - ../base/aws-load-balancer-controller
   - ../base/external-dns
   - ../base/aws-logging
-  - ../base/lb-init
 patches:
   - path: patches/aws-load-balancer-controller.yml
     target:

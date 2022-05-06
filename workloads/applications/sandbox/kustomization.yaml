@@ -6,4 +6,5 @@ resources:
   - ../base/camel-wfp-app-integration/
   - ../base/paasport-admin-dashboard-integration/
   - ../base/paasport-admin-dashboard-ui/
+  - ../base/lb-init
 patches:
