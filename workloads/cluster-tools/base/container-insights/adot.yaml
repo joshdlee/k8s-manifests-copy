@@ -29,6 +29,14 @@ roleRef:
   kind: ClusterRole
   name: adotcol-admin-role
   apiGroup: rbac.authorization.k8s.io
+---
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: adot-collector
+  namespace: fargate-container-insights
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::744692937981:role/adot-collector-sandbox
 
 # collector configuration section
 # update `ClusterName=YOUR-EKS-CLUSTER-NAME` in the env variable OTEL_RESOURCE_ATTRIBUTES
