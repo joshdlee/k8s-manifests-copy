@@ -16,6 +16,6 @@ metadata:
     alb.ingress.kubernetes.io/actions.default-rule: >
       {"type":"fixed-response","fixedResponseConfig":{"contentType":"text/plain","statusCode":"403","messageBody":"Forbidden"}}
 spec:
-  backend:
+  defaultBackend:
     serviceName: default-rule
     servicePort: use-annotation
