@@ -9,7 +9,7 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
     alb.ingress.kubernetes.io/success-codes: '302'
-    alb.ingress.kubernetes.io/wafv2-acl-arn: arn:aws:wafv2:us-east-1:744692937981:regional/webacl/launchpad-sandbox/c03a363b-6322-4649-ac04-9b63e7d1472d
+    alb.ingress.kubernetes.io/healthcheck-path: '/api/v1'
 spec:
   rules:
     - host: mission-control-service.sandbox.paasport.io
