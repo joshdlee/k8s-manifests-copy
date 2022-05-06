@@ -19,4 +19,5 @@ spec:
   defaultBackend:
     service:
       name: default-rule
-      port: use-annotation
+      port:
+        name: use-annotation
