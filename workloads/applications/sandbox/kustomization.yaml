@@ -7,4 +7,5 @@ resources:
   - ../base/paasport-admin-dashboard-integration/
   - ../base/paasport-admin-dashboard-ui/
   - ../base/lb-init
+  - ../base/camel-stjohns-app/
 patches:

@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: camel-stjohns-app-sandbox
+  namespace: camel-stjohns
+  labels:
+    app: camel-stjohns-app-sandbox
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: camel-stjohns-app-sandbox
+  template:
+    metadata:
+      labels:
+        app: camel-stjohns-app-sandbox
+    spec:
+      serviceAccountName: camel-stjohns
+      containers:
+        - image: 744692937981.dkr.ecr.us-east-1.amazonaws.com/camel-stjohns:latest
+          name: camel-stjohns-sandbox
+          env:
+            - name: "SPRING_PROFILES_ACTIVE"
+              value: "sandbox"
+          ports:
+            - containerPort: 8080
+              name: http
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "1.5Gi"
+              cpu: ".5"
+      imagePullSecrets:
+        - name: us-east-1-ecr-registry
+
+
