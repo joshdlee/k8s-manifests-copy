@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: camel-bolt-app-sandbox
+  namespace: camel-bolt
+  labels:
+    app: camel-bolt-app-sandbox
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: camel-bolt-app-sandbox
+  template:
+    metadata:
+      labels:
+        app: camel-bolt-app-sandbox
+    spec:
+      serviceAccountName: camel-bolt
+      containers:
+        - image: 744692937981.dkr.ecr.us-east-1.amazonaws.com/camel-bolt:latest
+          name: camel-bolt-sandbox
+          env:
+            - name: "SPRING_PROFILES_ACTIVE"
+              value: "sandbox"
+          ports:
+            - containerPort: 8080
+              name: http
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "1.5Gi"
+              cpu: ".5"
+      imagePullSecrets:
+        - name: us-east-1-ecr-registry
+
+

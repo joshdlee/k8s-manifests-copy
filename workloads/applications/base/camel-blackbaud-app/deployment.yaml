@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: camel-blackbaud-app-sandbox
+  namespace: camel-blackbaud
+  labels:
+    app: camel-blackbaud-app-sandbox
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: camel-blackbaud-app-sandbox
+  template:
+    metadata:
+      labels:
+        app: camel-blackbaud-app-sandbox
+    spec:
+      serviceAccountName: camel-blackbaud
+      containers:
+        - image: 744692937981.dkr.ecr.us-east-1.amazonaws.com/camel-blackbaud:latest
+          name: camel-blackbaud-sandbox
+          env:
+            - name: "SPRING_PROFILES_ACTIVE"
+              value: "sandbox"
+          ports:
+            - containerPort: 8080
+              name: http
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "1.5Gi"
+              cpu: ".5"
+      imagePullSecrets:
+        - name: us-east-1-ecr-registry
+
+
