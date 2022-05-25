@@ -25,3 +25,34 @@ metadata:
   name: aws-observability
   labels:
     aws-observability: enabled
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: fargate-container-insights
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: camel-stjohns
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: camel-bolt
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: camel-blackbaud
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: camel-freedomhouse
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: camel-chargebee-scanz
+  

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: camel-blackbaud
+  name: camel-blackbaud
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+  type: ClusterIP
+  selector:
+    app: camel-blackbaud-app-sandbox

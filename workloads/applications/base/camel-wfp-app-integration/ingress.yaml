@@ -5,15 +5,10 @@ metadata:
   name: camel-wfp-integration
   annotations:
     kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/load-balancer-name: launchpad
-    alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/group.name: launchpad
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS":443}]'
-    alb.ingress.kubernetes.io/ssl-redirect: '443'
     alb.ingress.kubernetes.io/success-codes: '302'
-    alb.ingress.kubernetes.io/inbound-cidrs: '47.32.231.239/32,59.94.34.114/32,52.4.244.61/32,209.161.250.102/32,135.0.166.59/32,54.224.203.162/32,184.66.229.61/32'
-    alb.ingress.kubernetes.io/wafv2-acl-arn: arn:aws:wafv2:us-east-1:744692937981:regional/webacl/launchpad-sandbox/c03a363b-6322-4649-ac04-9b63e7d1472d
 spec:
   rules:
     - host: "wfp-integration.sandbox.paasport.io"

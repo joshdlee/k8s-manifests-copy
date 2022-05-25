@@ -6,4 +6,10 @@ resources:
   - ../base/camel-wfp-app-integration/
   - ../base/paasport-admin-dashboard-integration/
   - ../base/paasport-admin-dashboard-ui/
+  - ../base/lb-init
+  - ../base/camel-stjohns-app/
+  - ../base/camel-bolt-app/
+  - ../base/camel-blackbaud-app/
+  - ../base/camel-freedomhouse-app/
+  - ../base/camel-chargebee-scanz-app/
 patches:

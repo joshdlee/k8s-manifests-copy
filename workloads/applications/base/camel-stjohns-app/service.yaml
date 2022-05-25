@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  namespace: camel-stjohns
+  name: camel-stjohns
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+      protocol: TCP
+  type: ClusterIP
+  selector:
+    app: camel-stjohns-app-sandbox
